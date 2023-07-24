@@ -123,7 +123,7 @@ table:not([class]) tr:hover {
   background: var(--block);
 }
 *[ff=title] {
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: "LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
 }
 blockquote {
   display: block;
@@ -326,7 +326,7 @@ a.button.start.gradient:hover:after {
 code {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
 }
 p>code:not([class]),
 li>code:not([class]) {
@@ -694,7 +694,7 @@ table:not([class]) {
   outline: none;
 }
 html {
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: "LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -720,7 +720,7 @@ input {
 }
 input.copy-area {
   display: block;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--text-p3);
@@ -896,6 +896,214 @@ div.toast {
   -webkit-user-select: none;
   user-select: none;
   box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+}
+:root {
+  --heo-none: rgba(0,0,0,0);
+  --heo-main: var(--theme-link);
+  --heo-snackbar-time: 5s;
+  --heo-theme-none: rgba(66,89,239,0.004);
+  --heo-background: var(--site-bg);
+  --heo-hovertext: var(--text-code);
+  --heo-secondtext: var(--text-p0);
+  --heo-scrollbar: rgba(60,60,67,0.4);
+  --heo-secondbg: var(--block);
+  --heo-card-bg: var(--block);
+  --heo-card-bg-none: rgba(255,255,255,0);
+  --heo-card-border: var(--block-border);
+  --heo-shadow-border: 0 8px 16px -4px rgba(44,45,48,0.047);
+  --style-border: 1px solid var(--heo-card-border);
+  --style-border-always: 1px solid var(--heo-card-border);
+}
+.post-TianliGPT {
+  background: var(--block);
+  border-radius: 12px;
+  padding: 12px;
+  line-height: 1.3;
+  border: var(--style-border-always);
+  margin: 16px 0;
+}
+@media screen and (max-width: 768px) {
+  .post-TianliGPT .post-TianliGPT {
+    margin-top: 22px;
+  }
+}
+.tianliGPT-title {
+  display: flex;
+  color: var(--theme-link);
+  border-radius: 8px;
+  align-items: center;
+  padding: 0 12px;
+  cursor: default;
+  user-select: none;
+}
+.tianliGPT-title-text {
+  font-weight: bold;
+  margin-left: 8px;
+  line-height: 1;
+}
+.tianliGPT-explanation {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: var(--card);
+  border-radius: 8px;
+  border: var(--style-border-always);
+  font-size: 15px;
+  line-height: 1.4;
+  display: flex;
+}
+.tianliGPT-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tianliGPT-suggestions .tianliGPT-suggestions-item {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: var(--card);
+  border-radius: 8px 8px 8px 0;
+  border: var(--style-border-always);
+  font-size: 15px;
+  line-height: 1.4;
+  display: flex;
+  width: fit-content;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tianliGPT-suggestions .tianliGPT-suggestions-item:hover {
+  background: var(--heo-main);
+  color: var(--text-p0);
+}
+.blinking-cursor {
+  background-color: var(--heo-main);
+  width: 10px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  animation: blinking-cursor 0.5s infinite;
+  -webkit-animation: blinking-cursor 0.5s infinite;
+  margin-left: 4px;
+}
+.tianliGPT-tag {
+  font-size: 12px;
+  background-color: var(--theme-link);
+  color: var(--card);
+  font-weight: bold;
+  border-radius: 4px;
+  margin-left: auto;
+  line-height: 1;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tianliGPT-tag:hover {
+  background: var(--text-p2);
+  color: var(--card);
+}
+ins.adsbygoogle {
+  margin: 16px 0;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  border: var(--style-border-always);
+}
+#tianliGPT-Toggle {
+  font-size: 12px;
+  background: var(--theme-link);
+  color: var(--card);
+  padding: 4px;
+  border-radius: 4px;
+  margin-left: 6px;
+  transform: scale(0.8);
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+#tianliGPT-Toggle:hover {
+  background: var(--block-hover);
+  color: var(--card);
+}
+.tianliGPT-title-icon {
+  width: 20px;
+  height: 20px;
+}
+.tianliGPT-title-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--heo-main);
+}
+.tianliGPT-title-icon svg path {
+  fill: var(--heo-main);
+}
+@-moz-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .md-text .article-footer {
   margin-top: 4rem;
@@ -1269,7 +1477,7 @@ nav.cap a+a {
   background-image: url("https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/arrow/f049bbd4e88ec.svg");
 }
 .paginator-wrap .current {
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   color: var(--text-p3);
 }
 .paginator-wrap .extend {
@@ -1507,7 +1715,6 @@ article.md-text.content+.related-wrap {
   border-radius: 2px;
   flex-shrink: 0;
   margin-right: 8px;
-  pointer-events: none;
 }
 .md-text .tag-plugin.checkbox input[type=checkbox]:before,
 .md-text .tag-plugin.checkbox input[type=checkbox]:after {
@@ -2360,7 +2567,7 @@ details.folding[child=iframe] >div.body {
   border-bottom-width: 2px;
   background: var(--card);
   padding: 2px 4px 1px 4px;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-weight: 700;
 }
 .md-text psw {
@@ -2382,7 +2589,7 @@ details.folding[child=iframe] >div.body {
   color: var(--theme);
   line-height: 1;
   font-weight: 700;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
 }
 .md-text h1 sup,
 .md-text h2 sup,
@@ -3846,7 +4053,7 @@ nav.menu a.nav-item:hover {
   padding: 0.5rem 0;
   line-height: 1;
   box-sizing: border-box;
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: "LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
   color: var(--text-p0);
 }
 .search-wrapper.noresult .search-icon {
@@ -4200,7 +4407,7 @@ nav.menu a.nav-item:hover {
 }
 .post-list #archive .archive-header {
   display: inline-block;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.5em;
@@ -4229,7 +4436,7 @@ nav.menu a.nav-item:hover {
   color: #ff5724;
 }
 .post-list #archive a.post time {
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   margin-right: 1em;
   font-weight: 700;
   flex-shrink: 0;
@@ -4259,7 +4466,7 @@ nav.menu a.nav-item:hover {
 }
 .post-list #cats a.cat .badge {
   font-weight: 700;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   opacity: 0.5;
   font-size: 0.75rem;
 }
@@ -4859,14 +5066,6 @@ h1.article-title {
   left: -2px;
   right: -2px;
 }
-.md-text li:not([class]) a:not([class]):before,
-.md-text p:not([class]) a:not([class]):before {
-  background: unset !important;
-}
-.md-text li:not([class]) a:not([class]):hover:before,
-.md-text p:not([class]) a:not([class]):hover:before {
-  background: var(--theme-link) !important;
-}
 .md-text .aplayer {
   border-radius: 12px;
 }
@@ -4969,9 +5168,96 @@ div.swiper-slide img {
 .reveal {
   visibility: hidden;
 }
-img[fancybox='true'] {
-  cursor: zoom-in;
+.highlight {
+  position: relative;
 }
-.swiper-slide {
-  cursor: zoom-in;
+.highlight .code .copy-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 0.5rem;
+  opacity: 0;
+  font-weight: 700;
+  color: var(--theme);
+  cursor: pointer;
+}
+.highlight:hover .copy-btn {
+  opacity: 0.25;
+}
+.highlight .code .copy-btn:hover {
+  color: var(--theme);
+  opacity: 0.75;
+}
+.highlight .code .copy-btn.success {
+  color: #3dc550;
+  opacity: 0.75;
+}
+.highlight .code .copy-btn.warning {
+  color: #fa6400;
+  opacity: 0.75;
+}
+.cmt-body.waline {
+  --waline-font-size: 0.9375rem;
+/* 常规颜色 */
+  --waline-white: #fff;
+  --waline-light-grey: #999;
+  --waline-dark-grey: #666;
+/* 主题色 */
+  --waline-theme-color: #1cd0fd;
+  --waline-active-color: #ff5724;
+/* 布局颜色 */
+  --waline-color: #444;
+  --waline-bgcolor: #fff;
+  --waline-bgcolor-light: #f8f8f8;
+  --waline-bgcolor-hover: #f0f0f0;
+  --waline-border-color: #ddd;
+  --waline-disable-bgcolor: #f8f8f8;
+  --waline-disable-color: #bbb;
+  --waline-code-bgcolor: #282c34;
+/* 特殊颜色 */
+  --waline-bq-color: #f0f0f0;
+/* 头像 */
+  --waline-avatar-size: 3.25rem;
+  --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+/* 徽章 */
+  --waline-badge-color: #3498db;
+  --waline-badge-font-size: 0.725em;
+/* 信息 */
+  --waline-info-bgcolor: #f8f8f8;
+  --waline-info-color: #999;
+  --waline-info-font-size: 0.725em;
+/* 渲染选择 */
+  --waline-border: 1px solid var(--waline-border-color);
+  --waline-avatar-radius: 50%;
+  --waline-box-shadow: none;
+}
+.cmt-body.waline .wl-panel {
+  margin: 0.5em 0 !important;
+}
+.cmt-body.waline .wl-meta-head {
+  padding: 0 !important;
+}
+@media (prefers-color-scheme: dark) {
+  .cmt-body.waline {
+    --waline-white: #000;
+    --waline-light-grey: #666;
+    --waline-dark-grey: #999;
+    --waline-color: #fff;
+    --waline-bgcolor: var(--block);
+    --waline-bgcolor-light: #272727;
+    --waline-border-color: #333;
+    --waline-disable-bgcolor: #444;
+    --waline-disable-color: #272727;
+    --waline-bq-color: #272727;
+    --waline-info-bgcolor: #272727;
+    --waline-info-color: #666;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .wl-count {
+    padding: 0.375em;
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #fff;
+  }
 }
